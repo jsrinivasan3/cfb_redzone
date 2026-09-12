@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CFB RedZone</title>
+<link rel="stylesheet" href="/static/style.css" />
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15/dist/hls.min.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>CFB REDZONE</div>
+    <div class="status-line">
+      <span id="last-updated">Loading…</span>
+      <span id="error-line" class="error"></span>
+    </div>
+    <button id="all-games-btn" class="ghost-btn">All Games</button>
+  </header>
+
+  <main id="grid" class="grid"></main>
+
+  <aside id="all-games-panel" class="all-games-panel hidden">
+    <div class="panel-header">
+      <h2>All Games Today</h2>
+      <button id="close-panel-btn" class="ghost-btn">✕</button>
+    </div>
+    <div id="all-games-list" class="all-games-list"></div>
+  </aside>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <div id="modal-title"></div>
+        <button id="modal-close" class="ghost-btn">✕ Close</button>
+      </div>
+      <div id="modal-scorebug" class="modal-scorebug"></div>
+      <div id="modal-video" class="modal-video"></div>
+      <a id="modal-fallback-link" href="#" target="_blank" rel="noopener" class="fallback-link">
+        Video not showing? Open the stream in a new tab →
+      </a>
+    </div>
+  </div>
+
+  <div id="stream-edit-backdrop" class="modal-backdrop hidden">
+    <div class="modal small">
+      <div class="modal-header">
+        <div id="stream-edit-title"></div>
+        <button id="stream-edit-close" class="ghost-btn">✕</button>
+      </div>
+      <label class="field-label" for="stream-edit-input">Stream URL (YouTube, Twitch, .m3u8, or any page link)</label>
+      <input id="stream-edit-input" type="text" placeholder="https://..." />
+      <div class="modal-actions">
+        <button id="stream-edit-save" class="primary-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
