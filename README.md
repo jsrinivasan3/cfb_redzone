@@ -94,3 +94,17 @@ data/
   and `POLL_MS` in `frontend/app.js` (browser → backend).
 - **Scoring weights**: all in `backend/scoring.py` if you want games with
   ranked teams, red zone situations, etc. weighted differently.
+
+## Screenshots
+
+Main dashboard — 6 auto-ranked tiles with live scores and badges:
+
+![Dashboard grid](screenshots/dashboard.png)
+
+"All Games Today" panel — full slate, pin a game to a slot, set a stream link:
+
+![All games panel](screenshots/all-games-panel.png)
+
+Pop-up player — click a tile to expand its stream with the score overlaid:
+
+![Pop-up player](screenshots/popup-player.png)
